@@ -12,25 +12,25 @@ function lineDraw() {
 }
 
 function blue(x) {
+    blue_y = 0;
     if (x >= 380 && x <= 420) blue_y = Math.floor(3.875*x - 1372.5);
     else if (x > 420 && x <= 490) blue_y = 255;
     else if (x > 490 && x <= 510) blue_y = Math.floor(-12.75*x + 6502.5);
-    else blue_y = 0;
     return blue_y;
 }
 function green(x) {
+    green_y = 0;
     if (x >= 440 && x <= 490) green_y = Math.floor(5.1*x - 2244);
     else if (x > 490 && x <= 580) green_y = 255;
-    else if (x > 580 && x <= 650) green_y = Math.floor(-3.6*x + 2340);
-    else green_y = 0;
+    else if (x > 580 && x <= 650) green_y = Math.floor(-3.64*x + 2366);
     return green_y;
 }
 function red(x) {
-    if (x >= 380 && x <= 440) red_y = Math.floor(-0.07*x*x + 56*x - 10910);
-    else if (x >= 510 && x <= 580) red_y = Math.floor(3.6*x -1833);
+    red_y = 0;
+    if (x >= 380 && x <= 440) red_y = Math.floor(-x*x/12 + 200*x/3 - 13200);
+    else if (x >= 510 && x <= 580) red_y = Math.floor(3.64*x -1856.4);
     else if (x > 580 && x <= 700) red_y = 255;
-    else if (x > 700 && x <= 780) red_y = Math.floor(-2*x + 1655);
-    else red_y = 0;
+    else if (x > 700 && x <= 780) red_y = Math.floor(-1.9375*x + 1611.25);
     return red_y;
 }
 
